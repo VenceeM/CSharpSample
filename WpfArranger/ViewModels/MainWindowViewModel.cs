@@ -13,7 +13,7 @@ namespace WpfArranger.ViewModels
 
         public MainWindowViewModel()
         {
-
+            Title = "Arranger";
         }
     }
 }
