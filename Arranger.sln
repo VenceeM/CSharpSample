@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arranger", "Arranger\Arrang
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibArranger", "LibArranger\LibArranger.csproj", "{8940854A-282C-48D9-B254-9F8FDBC789DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfArranger", "WpfArranger\WpfArranger.csproj", "{F1339A55-98F7-4730-B9FF-B9174080D4E7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{8940854A-282C-48D9-B254-9F8FDBC789DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8940854A-282C-48D9-B254-9F8FDBC789DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8940854A-282C-48D9-B254-9F8FDBC789DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1339A55-98F7-4730-B9FF-B9174080D4E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1339A55-98F7-4730-B9FF-B9174080D4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1339A55-98F7-4730-B9FF-B9174080D4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1339A55-98F7-4730-B9FF-B9174080D4E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
