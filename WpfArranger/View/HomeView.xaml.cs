@@ -14,17 +14,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfArranger.ViewModel;
 
-namespace WpfArranger
+namespace WpfArranger.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HomeView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomeView : UserControl
     {
-        public MainWindow()
+        public HomeView()
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = new HomeViewModel();
         }
     }
 }
