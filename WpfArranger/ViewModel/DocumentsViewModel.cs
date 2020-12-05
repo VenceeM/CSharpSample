@@ -9,10 +9,10 @@ using System.Windows.Input;
 
 namespace WpfArranger.ViewModel
 {
-    public class HomeViewModel: BaseViewModel
+    public class DocumentsViewModel: BaseViewModel
     {
         
-        public HomeViewModel()
+        public DocumentsViewModel()
         {
             Title = "Home";
            

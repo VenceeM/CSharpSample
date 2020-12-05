@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ContentControl Content="{Binding CurrentView}"/>
+
+        <ContentControl Content="{Binding CurrentView}" Margin="0,40,0,0"/>
+        <StackPanel Orientation="Horizontal" Margin="0,0,377,0" Height="35" VerticalAlignment="Top">
+            <StackPanel Margin="5">
+                <Button Content="Documents" Command="{Binding docs}" CommandParameter="Docs" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
+            </StackPanel>
+            <StackPanel Margin="5">
+                <Button Content="Videos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
+            </StackPanel>
+            <StackPanel Margin="5">
+                <Button Content="Images" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
 </Window>

@@ -6,8 +6,8 @@
              xmlns:vm="clr-namespace:WpfArranger.ViewModel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type vm:HomeViewModel}">
-            <view:HomeView/>
+        <DataTemplate DataType="{x:Type vm:DocumentsViewModel}">
+            <view:DocView/>
         </DataTemplate>
          
     </Application.Resources>

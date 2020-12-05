@@ -17,14 +17,14 @@ using WpfArranger.ViewModel;
 namespace WpfArranger.View
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interaction logic for DocView.xaml
     /// </summary>
-    public partial class HomeView : UserControl
+    public partial class DocView : UserControl
     {
-        public HomeView()
+        public DocView()
         {
             InitializeComponent();
-            DataContext = new HomeViewModel();
+            DataContext = new DocumentsViewModel();
         }
     }
 }

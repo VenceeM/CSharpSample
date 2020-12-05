@@ -1,22 +1,35 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace WpfArranger.ViewModel
 {
     public class MainWindowViewModel: BaseViewModel
     {
 
-        private HomeViewModel home;
+        private DocumentsViewModel doc;
+        public ICommand docs { get; set; }
         public MainWindowViewModel()
         {
-            home = new HomeViewModel();
-            CurrentView = home;
+            doc = new DocumentsViewModel();
+            docs = new RelayCommand<string>((s) => OnNavigate(s));
            
         }
 
+        private void OnNavigate(string navPath)
+        {
+            switch (navPath)
+            {
+                case "Docs":
+                    CurrentView = doc;
+                    break;
+            }
+        }
+        
 
         private object _currentView;
 
