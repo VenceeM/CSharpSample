@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfArranger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" MinHeight="500" MinWidth="600" Width="800">
     <Grid>
 
         <ContentControl Content="{Binding CurrentView}" Margin="0,40,0,0"/>
@@ -14,7 +14,7 @@
                 <Button Content="Documents" Command="{Binding docs}" CommandParameter="Docs" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
             </StackPanel>
             <StackPanel Margin="5">
-                <Button Content="Videos" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
+                <Button Content="Videos" Command="{Binding docs}" CommandParameter="Vids" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
             </StackPanel>
             <StackPanel Margin="5">
                 <Button Content="Images" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
