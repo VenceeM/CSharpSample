@@ -2,25 +2,35 @@
 using LibArranger.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace LibArranger
 {
     public class Coppier
     {
-        public List<string> list { get; set; }
+        public List<string> list;
 
-
-        public async void Cop()
+        public Coppier()
         {
+            list = new List<string>();
+            items.Choice = "";
+            items.Path = "";
+            
+        }
+
+
+        public async void Cop(string choice = "")
+        {
+            
             try
             {
-
+                items.Choice = choice;
                 //Return the documents list and create a Folder named 'Arranger'
                 //Move all the documents to arranger folder 
-                Console.Clear();
-                Console.WriteLine("Please wait...");
-                Console.WriteLine();
+                //Console.Clear();
+                //Console.WriteLine("Please wait...");
+                //Console.WriteLine();
                 Scan sc = new Scan();
                 string pathname = "";
 
@@ -33,6 +43,7 @@ namespace LibArranger
 
                         break;
                     case "Videos":
+                       
                         list = await sc.VidList();
                         pathname = "Videos";
                         break;
@@ -149,22 +160,23 @@ namespace LibArranger
 
                     System.Threading.Thread.Sleep(300);
                     Console.WriteLine(Path.GetFileName(i));
+                    Process.Start(fullPath);
 
 
                 }
 
 
-                Console.Clear();
+                //Console.Clear();
 
-                Console.WriteLine($"Success...Please check the folder named Arranger{pathname}");
+                //Console.WriteLine($"Success...Please check the folder named Arranger{pathname}");
 
-                Console.WriteLine();
-                Console.WriteLine("Press enter to exit.");
+                //Console.WriteLine();
+                //Console.WriteLine("Press enter to exit.");
 
             }
             catch (Exception ex)
             {
-                Console.Write(ex.Message.ToString());
+                Console.Write("Error "+ ex.Message + " " +ex.Data);
             }
         }
     }

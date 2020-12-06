@@ -7,32 +7,25 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" Background="White" MinHeight="500" MinWidth="600" Height="auto" Width="auto" d:DesignWidth="800">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" Margin="235,197,235,259" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" Margin="0" Orientation="Horizontal" VerticalAlignment="Center" Width="448">
             <StackPanel Orientation="Horizontal" Margin="5">
-                <Button Content="Documents" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontFamily="Calibri" FontSize="18" Height="35" BorderBrush="{x:Null}"/>
+                <Button Content="Documents" Command="{Binding _commands}" CommandParameter="Documents"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontFamily="Calibri" FontSize="18" Height="35" BorderBrush="{x:Null}"/>
 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <Button Content="Downloads" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontFamily="Calibri" FontSize="18" Height="35" BorderBrush="{x:Null}"/>
+                <Button Content="Downloads" HorizontalAlignment="Left" Command="{Binding _commands}" CommandParameter="Downloads"  VerticalAlignment="Top" Width="100" FontFamily="Calibri" FontSize="18" Height="35" BorderBrush="{x:Null}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
-                <Button Content="Desktop" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontFamily="Calibri" FontSize="18" Height="35" BorderBrush="{x:Null}"/>
+                <Button Content="Desktop" HorizontalAlignment="Left" Command="{Binding _commands}" CommandParameter="Desktop" VerticalAlignment="Top" Width="100" FontFamily="Calibri" FontSize="18" Height="35" BorderBrush="{x:Null}"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Content="Other" Command="{Binding _commands}" CommandParameter="Other" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" FontFamily="Calibri" FontSize="18" Height="34" BorderBrush="{x:Null}"/>
 
             </StackPanel>
 
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="190,246,190,207" VerticalAlignment="Center" Height="47" Width="420">
-            <StackPanel>
-                <Button Content="Other" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" FontFamily="Calibri" FontSize="18" Height="34" BorderBrush="{x:Null}"/>
 
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBox HorizontalAlignment="Left" Height="34" Padding="5" TextWrapping="Wrap" Text="C:\Users\name\Documents" VerticalAlignment="Top" Width="310" FontSize="16" TextAlignment="Center"/>
-
-            </StackPanel>
-
-
-        </StackPanel>
 
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Choose a location or Enter the path" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
 

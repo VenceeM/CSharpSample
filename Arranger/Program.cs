@@ -21,7 +21,9 @@ namespace Arranger
                     Console.Clear();
                     
                     DocumentArrange sd = new DocumentArrange();
+                    
                     sd.listDoc();
+                   
                 }
                 if(items.Choice == "Videos")
                 {
