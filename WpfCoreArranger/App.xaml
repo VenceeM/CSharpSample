@@ -1,0 +1,15 @@
+﻿<Application x:Class="WpfCoreArranger.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfCoreArranger"
+             xmlns:view="clr-namespace:WpfCoreArranger.View"
+             xmlns:vm="clr-namespace:WpfCoreArranger.ViewModel"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <DataTemplate DataType="{x:Type vm:DocumentsViewModel}">
+            <view:DocView/>
+        </DataTemplate>
+         
+    </Application.Resources>
+</Application>

@@ -14,28 +14,28 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
 
-namespace WpfArranger.ViewModel
+namespace WpfCoreArranger.ViewModel
 {
-    public class DocumentsViewModel: BaseViewModel
+    public class DocumentsViewModel : BaseViewModel
     {
-        
+
         public ICommand _commands { get; set; }
         public ICommand fileType { get; set; }
-       
+
         public DocumentsViewModel()
         {
 
 
-            
+
 
             //items.Path = string.Empty;
             fileType = new RelayCommand<string>((s) => FileType(s));
-            _commands = new RelayCommand<string>((s) =>  Document(s));
+            _commands = new RelayCommand<string>((s) => Document(s));
             Title = "Home";
-           
+
         }
 
-      
+
         private bool valid = false;
 
         public bool Valid
@@ -70,7 +70,7 @@ namespace WpfArranger.ViewModel
                     break;
 
 
-                    
+
             }
 
         }
@@ -80,7 +80,7 @@ namespace WpfArranger.ViewModel
         private async void Document(string choice = "")
         {
             await DocumentAsync(choice);
-            
+
         }
 
         private int count = 0;
@@ -102,7 +102,7 @@ namespace WpfArranger.ViewModel
         private async Task DocumentAsync(string choice)
         {
             Count = 0;
-          
+
             try
             {
                 //items.Choice = "Documents";
@@ -113,7 +113,7 @@ namespace WpfArranger.ViewModel
                 {
                     case "Documents":
                         items.Path = $@"C:\Users\{uname}\Documents";
-                      
+
                         break;
                     case "Downloads":
                         items.Path = $@"C:\Users\{uname}\Downloads";
@@ -144,15 +144,15 @@ namespace WpfArranger.ViewModel
                     System.Windows.Forms.MessageBox.Show($"Hit Ok to start copying your files.", "Wait");
 
                     System.Threading.Thread.Sleep(1000);
-                
+
                     Task t;
 
-                    t =  Task.Run(() => cp.Cop(Extension));
+                    t = Task.Run(() => cp.Cop(Extension));
                     Vis = "Visible";
                     while (!t.IsCompleted)
                     {
                         Count++;
-                        
+
                         await Task.Run(() =>
                         {
 
@@ -162,16 +162,16 @@ namespace WpfArranger.ViewModel
                             {
                                 Count = 100;
                             }
-                            
+
                             Console.WriteLine(Count);
                         });
-                    
+
                     }
 
                     await t.ContinueWith(s =>
                     {
                         System.Windows.Forms.MessageBox.Show($"Folder will open after you hit Ok", "Success");
-                        Process.Start(items.FullPath);
+                        Process.Start("Explorer.exe", items.FullPath);
                         Vis = "Hidden";
                     });
                     //await t.ContinueWith( s => 
@@ -183,7 +183,7 @@ namespace WpfArranger.ViewModel
                     //    System.Windows.Forms.MessageBox.Show($"Folder will open after you hit Ok", "Success");
                     //    Process.Start(items.FullPath);
                     //});
-                    
+
                     //cp.Cop(Extension);
 
                 }
