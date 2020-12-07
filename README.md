@@ -1,6 +1,7 @@
 # Arranger
 
 ## This is a Sample Projects
+### All of this Application is a File Arranger that can help users to arrange their files by Folder
 
 1. Arranger - This is the Console Application using .Net Core
 2. LibArranger - This is a Class Library using .Net Core
