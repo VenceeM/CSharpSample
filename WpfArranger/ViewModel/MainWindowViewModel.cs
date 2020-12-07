@@ -12,31 +12,19 @@ namespace WpfArranger.ViewModel
     {
 
         private DocumentsViewModel doc;
-        private VidViewModel vid;
-        public ICommand docs { get; set; }
+     
+     
        
         public MainWindowViewModel()
         {
-            vid = new VidViewModel();
+           
             doc = new DocumentsViewModel();
-            docs = new RelayCommand<string>((s) => OnNavigate(s));
+           
             CurrentView = doc;
            
         }
 
-        private void OnNavigate(string navPath)
-        {
-            switch (navPath)
-            {
-                case "Docs":
-                    CurrentView = doc;
-                    break;
-                case "Vids":
-                    CurrentView = vid;
-                    break;
-                
-            }
-        }
+       
         
 
         private object _currentView;

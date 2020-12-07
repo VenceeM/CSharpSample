@@ -46,6 +46,7 @@ namespace LibArranger
                        
                         list = await sc.VidList();
                         pathname = "Videos";
+                        
                         break;
                     case "Images":
                         list = await sc.ImgList();
@@ -61,7 +62,7 @@ namespace LibArranger
 
                 foreach (var i in list)
                 {
-
+                   
 
                     Directory.CreateDirectory(fullPath + Path.GetExtension(i).Substring(1).ToUpper());
 
@@ -69,6 +70,7 @@ namespace LibArranger
 
                     ext = Path.GetExtension(i);
 
+                    
 
 
                     if (items.Choice == "Documents")
@@ -104,10 +106,14 @@ namespace LibArranger
                     }
                     if (items.Choice == "Videos")
                     {
+                       
+
                         string[] ps = { "mp4", "flv", "avi", "mkv", "vob", "wmv" };
                         switch (ext)
                         {
+
                             case ".mp4":
+                                
                                 File.Copy(i, Path.Combine(fullPath + ps[0].ToString(), filename), true);
                                 break;
                             case ".flv":
@@ -159,8 +165,9 @@ namespace LibArranger
 
 
                     System.Threading.Thread.Sleep(300);
+
                     Console.WriteLine(Path.GetFileName(i));
-                    Process.Start(fullPath);
+                    items.FullPath = fullPath;
 
 
                 }
@@ -179,5 +186,9 @@ namespace LibArranger
                 Console.Write("Error "+ ex.Message + " " +ex.Data);
             }
         }
+
+
+        
+        
     }
 }

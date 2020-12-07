@@ -5,21 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfArranger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" MinHeight="500" MinWidth="600" Width="800">
+        Title="MainWindow" Height="500" MaxHeight="500" MaxWidth="800" MinHeight="500" MinWidth="600" Width="800">
     <Grid>
 
-        <ContentControl Content="{Binding CurrentView}" Margin="0,40,0,0"/>
-        <StackPanel Orientation="Horizontal" Margin="0,0,377,0" Height="35" VerticalAlignment="Top">
-            <StackPanel Margin="5">
-                <Button Content="Documents" Command="{Binding docs}" CommandParameter="Docs" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
-            </StackPanel>
-            <StackPanel Margin="5">
-                <Button Content="Videos" Command="{Binding docs}" CommandParameter="Vids" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
-            </StackPanel>
-            <StackPanel Margin="5">
-                <Button Content="Images" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75"/>
-            </StackPanel>
-
-        </StackPanel>
+        <ContentControl Content="{Binding CurrentView}"/>
+       
     </Grid>
 </Window>
