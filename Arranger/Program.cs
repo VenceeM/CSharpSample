@@ -20,20 +20,23 @@ namespace Arranger
                 {
                     Console.Clear();
                     
-                    DocumentArrange sd = new DocumentArrange();
+                   
+                    Coppier cp = new Coppier();
+                    cp.Cop();
                     
-                    sd.listDoc();
                    
                 }
                 if(items.Choice == "Videos")
                 {
-                    VideoArrange vd = new VideoArrange();
-                    vd.VideoList();
+                    
+                    Coppier cp = new Coppier();
+                    cp.Cop();
                 }
                 if(items.Choice == "Images")
                 {
-                    ImgArrange img = new ImgArrange();
-                    img.listImg();
+                    
+                    Coppier cp = new Coppier();
+                    cp.Cop();
 
                 }
               
