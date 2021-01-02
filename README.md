@@ -7,3 +7,4 @@
 2. LibArranger - This is a Class Library using .Net Core
 3. WpfArranger - This is a Windows Presentation Foundation Application using .Net Framework
 4. WpfCoreArranger - This is a Windows Presentation Foundation Application using .Net Core
+5. SudokuSolver - Sample Console Application that can solve sudoku problem.
